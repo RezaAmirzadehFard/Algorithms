@@ -2,14 +2,14 @@ package dynamicProgarmming.matrixchain;
 
 public class TopDownMatrixChain {
     //  Top to Down (memoization)
-    public int topDownMatrixProduct(int[] p, int i , int j, int[][] m) {
+    public int topDownMatrixProduct(int[] p, int i, int j, int[][] m) {
 
         if (i == j) {
             return 0;
         }
 
         // this if -> check if we calculate cost of sequence of Aij in past return the cost
-        if ( m[i][j] > 0) {
+        if (m[i][j] > 0) {
             return m[i][j];
         }
 
@@ -17,7 +17,7 @@ public class TopDownMatrixChain {
 
         for (int k = i; k < j; k++) {
 
-            int q = topDownMatrixProduct(p, i, k,m) + topDownMatrixProduct(p, k + 1, j,m) + (p[i - 1] * p[k] * p[j]);
+            int q = topDownMatrixProduct(p, i, k, m) + topDownMatrixProduct(p, k + 1, j, m) + (p[i - 1] * p[k] * p[j]);
 
             if (q < min) {
                 min = q;
@@ -25,7 +25,7 @@ public class TopDownMatrixChain {
 
         }
 
-        m[i][j] = min ;
+        m[i][j] = min;
         return min;
     }
 }

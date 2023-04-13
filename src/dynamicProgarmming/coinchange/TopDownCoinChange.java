@@ -36,7 +36,7 @@ public class TopDownCoinChange {
     }
 
     // Top-Down coin change
-    /*public static void main(String[] args) {
+    public static void main(String[] args) {
         int[] coins = {1, 5, 10, 25}; // Example set of coin denominations
         int amount = 27; // Example amount to make change for
 
@@ -44,5 +44,5 @@ public class TopDownCoinChange {
 
         int minCoins = coinChange(coins, amount, memo);
         System.out.println("Minimum number of coins required: " + minCoins);
-    }*/
+    }
 }

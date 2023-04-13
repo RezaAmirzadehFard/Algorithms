@@ -35,6 +35,4 @@ public class CoinChange {
         int minCoins = coinChange(coins, amount);
         System.out.println("Minimum number of coins required: " + minCoins);
     }
-
-
 }

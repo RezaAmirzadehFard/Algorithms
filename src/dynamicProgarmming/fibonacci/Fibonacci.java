@@ -13,14 +13,13 @@ public class Fibonacci {
             System.out.print(fibonacci(i) + " ");
         }
 
-        System.out.println("\nThe value of "+ n + " in fibonacci manner is : " + fibonacci(n));
+        System.out.println("\nThe value of " + n + " in fibonacci manner is : " + fibonacci(n));
     }
 
     public static int fibonacci(int n) {
         if (n == 1 || n == 2) {
             return 1;
         }
-        return fibonacci(n-1) + fibonacci(n-2);
+        return fibonacci(n - 1) + fibonacci(n - 2);
     }
-
 }

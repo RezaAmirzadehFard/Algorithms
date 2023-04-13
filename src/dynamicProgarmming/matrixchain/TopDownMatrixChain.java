@@ -4,7 +4,7 @@ public class TopDownMatrixChain {
     //  Top to Down (memoization)
     public int topDownMatrixProduct(int[] p, int i, int j, int[][] m) {
 
-        if (i == j) {
+        if (i >= j) {
             return 0;
         }
 
@@ -24,7 +24,6 @@ public class TopDownMatrixChain {
             }
 
         }
-
         m[i][j] = min;
         return min;
     }

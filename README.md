@@ -1,1 +1,1 @@
-# All-Go-Rhythm
+# AllGoRhythm

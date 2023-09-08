@@ -6,7 +6,7 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 public class HuffmanCoding {
-
+    
     public Node huffman(List<Node> Nodes){
         Queue<Node> queue = new PriorityQueue(Nodes);
 

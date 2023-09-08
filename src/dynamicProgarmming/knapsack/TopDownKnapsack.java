@@ -3,24 +3,19 @@ package dynamicProgarmming.knapsack;
 public class TopDownKnapsack {
 
     public int topDownKnapsack(int[] v, int[] w, int kpw, int n, int[][] r) {
-
         if (kpw == 0 || n == 0) {
             return 0;
         }
-
         if (r[n][kpw] > 0) {
             return r[n][kpw];
         }
-
         if (w[n] > kpw) {
             int p = topDownKnapsack(v, w, kpw, n - 1, r);
             r[n][kpw] = p;
             return p;
         } else {
-
             int p = topDownKnapsack(v, w, kpw, n - 1, r);
             int q = topDownKnapsack(v, w, kpw - w[n], n - 1, r) + v[n];
-
             if (q > p) {
                 r[n][kpw] = q;
                 return q;

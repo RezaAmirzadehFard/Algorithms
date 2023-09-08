@@ -6,8 +6,6 @@
 
 ## Headlines
 
----
-
 - Dynamic Programming
   - [Rod Cutting](src/dynamicProgarmming/rodcut)
   - Matrix-chain Multiplication

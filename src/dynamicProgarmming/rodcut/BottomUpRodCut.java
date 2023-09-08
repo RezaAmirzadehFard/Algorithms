@@ -1,6 +1,7 @@
 package dynamicProgarmming.rodcut;
 
 public class BottomUpRodCut {
+    // Implementation the rod cut problem with bottom-up approach
     public int bottomUpRodCut(int p[], int n) {
         int r[] = new int[n + 1];
 

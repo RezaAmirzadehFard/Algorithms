@@ -1,6 +1,7 @@
 package dynamicProgarmming.rodcut;
 
 public class RodCut {
+    // Implementation of the rod cut problem with recursive approach
     public int rudCut(int p[], int n) {
         if (n == 0 || n == 1) {
             return p[n];

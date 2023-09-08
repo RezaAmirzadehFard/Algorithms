@@ -16,4 +16,12 @@
 
 
 - Greedy
+  - Fractional Knapsack
+  - Activity Selection
+  - Huffman Codes
+  
+
 - Amortized Analysis 
+  - Increment Binary Counter
+  - Stack operation
+  - Dynamic Array

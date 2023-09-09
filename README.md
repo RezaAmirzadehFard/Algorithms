@@ -10,8 +10,8 @@ I have covered the algorithms that are related to the Design Algorithms course o
 ## Headlines
 
 - Dynamic Programming
-  - [Rod Cutting](src/dynamicProgarmming/rodcut)
-  - Matrix-chain Multiplication
+  - Rod Cutting [[docs]](docs/rodCutting.md) | [[code]](src/dynamicProgarmming/rodcut)
+  - Matrix-chain Multiplication 
   - Knapsack
   - Coin Change
   - Longest Common Subsequence

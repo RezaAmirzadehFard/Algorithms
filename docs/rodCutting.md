@@ -59,3 +59,41 @@ rod with length of 5:
 
 - `r[0] = 0` ==> base condition
 
+---
+## Recursion Tree
+
+- Recursion tree of rod with length of 4.
+- parent label `s`
+- child label `t`
+- an edge from parent to child corresponds to cutting of an initial piece of size `s-t` and remainder of size `t`.
+```mermaid
+graph TD
+  A((4)) --> B((3)) --> B1((2)) --> B2((1))
+  A --> C((2))
+  A --> D((1))
+  A --> E((0))
+  B1 --> D1((0))
+  B2 --> E1((0))
+  B --> G((1))
+  G --> G1((0))
+  B --> H((0))
+  C --> J((1))
+  C --> K((0))
+  D --> L((0))
+```
+## Recursion Tree of Formula
+```mermaid
+graph TD
+  A["r[4]"] --> B["p[1] + r[3]"] --> B1["p[1] + r[2]"] --> B2["p[1] + r[1]"]
+  A --> C["p[2] + r[2]"]
+  A --> D["p[3] + r[1]"]
+  A --> E["p[4] + r[0]"]
+  B1 --> D1["p[2] + r[0]"]
+  B2 --> E1["p[1] + r[0]"]
+  B --> G["p[2] + r[1]"]
+  G --> G1["p[1] + r[0]"]
+  B --> H["p[1] + r[0]"]
+  C --> J["p[1] + r[1]"]
+  C --> K["p[2] + r[0]"]
+  D --> L["p[1] + r[0]"]
+```

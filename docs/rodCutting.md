@@ -1,6 +1,7 @@
 # Rod Cutting
-
-## Recursive Formula:
+## Problem :
+ >Given rod...
+## Recursive Formula :
 - `n` is length of rod
 - `i` is an index that shows feasible location for cutting
 - `p[]` is an array that shows price of rod without cutting
@@ -10,15 +11,64 @@
 
 `r[n]= max(p[i] + r[n-i])` & `1 <= i <= n`
 
+## Top-Down :
+```java
+public class TopDown {
+    public static int memoizedRodCut(int[] p, int n) {
+        int[] r = new int[n + 1];
+        for (int i = 0; i <= n; i++) {
+            r[i] = Integer.MIN_VALUE;
+        }
+        return memoizedRodCutAux(p, n, r);
+    }
+
+    public static int memoizedRodCutAux(int[] p, int n, int[] r) {
+        if (n == 0) {
+            return p[n];
+        }
+        if (r[n] > 0) {
+            return r[n];
+        }
+        int q = Integer.MIN_VALUE;
+        for (int i = 1; i <= n; i++) {
+            q = max(q, p[i] + memoizedRodCutAux(p, n - i, r));
+        }
+        r[n] = q;
+        return q;
+    }
+}
+```
+> You need a find maximum method to above code works well. For complete code, details and other forms [click](dynamicProgarmming/rodcut/TopDownRodCut.java).
+
+
+
+## Bottom-Up :
+```java
+public class BottomUp {
+  public static int bottomUpROdCut(int[] p, int n){
+    int[] r = new int[n+1];
+    r[0]=0;
+    for (int j = 1; j <= n; j++){
+      int q = Integer.MIN_VALUE;
+      for(int i = 1; i <= j; i++){
+        q = max(q, p[i]+r[j-i]);
+      }
+      r[j] = q;
+    }
+    return r[n];
+  }
+}
+```
+> You need a find maximum method to above code works well. For complete code, details and other forms [click](dynamicProgarmming/rodcut/BottomUpRodCut.java).
 
 ### Example:
 
-#### Table of Price
+#### Given Price Table
 | length `i` | 0 | 1 | 2 | 3 | 4 | 5  | 6  | 7  | 8  | 9  | 10 |
 |------------|---|---|---|---|---|----|----|----|----|----|----|
 | price `i`  | 0 | 1 | 5 | 8 | 9 | 10 | 17 | 17 | 20 | 24 | 30 |
   
-- If we have a rod of length, 4 and want to cut up the rod and selling with maximum revenue or cost, we can obtain the cost with recursive formula:
+- If we have a rod of length, 5 and want to cut up the rod and selling with maximum revenue or cost, we can obtain the cost with recursive formula:
 
 rod with length of 5:
 
@@ -102,3 +152,17 @@ graph TD
   C2 -- i = 1 --> D3["p[1] + r[0]"]
   D1 -- i = 1 --> E1["p[1] + r[0]"]
 ```
+
+## Bottom-Up Tabulation
+- Each home that has non-negative value shows values of revenue.
+- In each column the biggest value is maximum revenue that obtains from rod of length `j`.
+- `-` this notion for infinity value or initialize value of arrays or shows that haven't valuable value.
+
+
+| `i\j` | 0 | 1 | 2 | 3 |  4   |
+|:-----:|---|---|---|---|:----:|
+|   0   | 0 | - | - | - |  -   |
+|   1   | - | 1 | 2 | 6 |  9   |
+|   2   | - | - | 5 | 6 |  10  |
+|   3   | - | - | - | 8 |  9   |
+|   4   | - | - | - | - |  9   |

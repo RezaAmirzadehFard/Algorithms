@@ -47,4 +47,30 @@ public class BottomUpRodCut {
         else
             return n2;
     }
+
+    public static int[] extendBottomUpRodCut(int[] p, int n){
+        int[] r = new int[n+1];
+        int[] s = new int[n+1];
+        r[0] = 0;
+        for (int j =1; j <= n; j++){
+            int max = Integer.MIN_VALUE;
+            for(int i = 1; i <= j; i++){
+                int q = p[i] + r[j - i];
+                if (q > max){
+                    max = q;
+                    s[j] = i;
+                }
+            }
+        }
+        return s;
+    }
+
+    public static void printExtendedBottomUpRodCut(int[] p, int n){
+        int[] c = extendBottomUpRodCut(p, n);
+        while(n>0){
+            System.out.println(c[n]);
+            n = n - c[n];
+        }
+
+    }
 }

@@ -17,8 +17,20 @@ public class BottomUpFibonacci {
             memo[i] = memo[i - 1] + memo[i - 2];
         }
 
-        for (int i = 1; i <= n; i++) {
+        for (int i = 0; i <= n; i++) {
             System.out.print(memo[i] + " ");
         }
+    }
+
+    public static int bottomUpFibonacci(int n){
+        int[] r = new int[n+1];
+        r[0] = 0;
+        r[1] = 1;
+        int q = -1;
+        for (int i = 2; i <= n; i++) {
+            q = r[i-1] + r[i-2];
+            r[i] = q;
+        }
+        return q;
     }
 }

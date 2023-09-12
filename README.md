@@ -13,6 +13,7 @@ I have covered the algorithms that are related to the Design Algorithms course o
   - Rod Cutting [[docs]](docs/rodCutting.md) | [[code]](src/dynamicProgarmming/rodcut)
   - Matrix-chain Multiplication 
   - Knapsack
+  - Fibonacci [[docs]](docs/fibonacci.md) | [[code]](src/dynamicProgarmming/fibonacci)
   - Coin Change
   - Longest Common Subsequence
   - Optimal Binary Search Tree

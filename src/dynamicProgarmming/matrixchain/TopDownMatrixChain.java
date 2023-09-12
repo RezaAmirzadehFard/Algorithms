@@ -8,7 +8,7 @@ public class TopDownMatrixChain {
             return 0;
         }
 
-        // this if -> check if we calculate cost of sequence of Aij in past return the cost
+        // this if -> check if we calculate cost of a sequence of Aij in past return the cost
         if (m[i][j] > 0) {
             return m[i][j];
         }

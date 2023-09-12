@@ -52,7 +52,7 @@ public class BottomUpRodCut {
         int[] r = new int[n+1];
         int[] s = new int[n+1];
         r[0] = 0;
-        for (int j =1; j <= n; j++){
+        for (int j = 1; j <= n; j++){
             int max = Integer.MIN_VALUE;
             for(int i = 1; i <= j; i++){
                 int q = p[i] + r[j - i];

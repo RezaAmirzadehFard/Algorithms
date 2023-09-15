@@ -1,17 +1,19 @@
-# Rod Cutting
+# Matrix Chain Multiplication
 ## Problem :
- >Given rod...
+ >Given a chain `<A1, A2,...,An>` of `n` matrices, where `for i = 1, 2,...,n`, matrix `Ai` has dimension `pi-1 * pi`, fully parenthesize the product `A1A2...An` in way that **minimize** the number of scalar multiplications.
+
+> The goal of the problem is that to find a way to parenthesize the sequence of matrices that yields the lowest cost. 
 ## Recursive Formula :
-- `n` is length of rod
-- `i` is an index that shows feasible location for cutting
-- `p[]` is an array that shows price of rod without cutting
-- `r[]` is an array that store maximum revenue obtains by cutting up the rod of length n
+
+- `p[]` is an array that store dimension of the matrix chain
+- `m[][]` is an array that saves minimum cost of the scalar multiplication of sequence `<Ai,Ai+1,...,Aj>`
 
 ### Formula :
 
-`r[n]= max(p[i] + r[n-i])` & `1 <= i <= n`
+`m[i,j] = min(m[i,k] + m[k+1,j] + p[i-1] * p[k] * p[j])` & `i <= k < j`
 
 ## Top-Down :
+<!--
 ```java
 public class TopDown {
     public static int memoizedRodCut(int[] p, int n) {
@@ -41,8 +43,9 @@ public class TopDown {
 > You need a find maximum method to above code works well. For complete code, details and other forms [click](dynamicProgarmming/rodcut/TopDownRodCut.java).
 
 
-
+-->
 ## Bottom-Up :
+<!--
 ```java
 public class BottomUp {
   public static int bottomUpROdCut(int[] p, int n){
@@ -60,9 +63,9 @@ public class BottomUp {
 }
 ```
 > You need a find maximum method to above code works well. For complete code, details and other forms [click](dynamicProgarmming/rodcut/BottomUpRodCut.java).
-
+-->
 ### Example:
-
+<!--
 #### Given Price Table
 | length `i` | 0 | 1 | 2 | 3 | 4 | 5  | 6  | 7  | 8  | 9  | 10 |
 |------------|---|---|---|---|---|----|----|----|----|----|----|
@@ -112,59 +115,12 @@ rod with length of 5:
 - `r[0] = 0` ==> base condition
 
 ---
+
+-->
+
 ## Recursion Tree
 
-- Recursion tree of rod with length of 4.
-- parent label `s`
-- child label `t`
-- an edge from parent to child corresponds to cutting of an initial piece of size `s-t` and remainder of size `t`.
-```mermaid
-graph TD
-  A((4)) --> B1((3))
-  A --> B2((2))
-  A --> B3((1))
-  A --> B4((0))
-  B1 --> C1((2))
-  B1 --> C2((1))
-  B1 --> C3((0))
-  B2 --> C4((1))
-  B2 --> C5((0))
-  B3 --> C6((0))
-  C1 --> D1((1))
-  C1 --> D2((0))
-  C2 --> D3((0))
-  D1 --> E1((0))
-```
 ## Recursion Tree of Formula
 
-```mermaid
-graph TD
-  A["r[4]"] -- i = 1--> B1["p[1] + r[3]"]
-  A -- i = 2 --> B2["p[2] + r[2]"]
-  A -- i = 3 --> B3["p[3] + r[1]"]
-  A -- i = 4 --> B4["p[4] + r[0]"]
-  B1 -- i = 1 --> C1["p[1] + r[2]"]
-  B1 -- i = 2 --> C2["p[2] + r[1]"]
-  B1 -- i = 3 --> C3["p[3] + r[0]"]
-  B2 -- i = 1 --> C4["p[1] + r[1]"]
-  B2 -- i = 2 --> C5["p[2] + r[0]"]
-  B3 -- i = 1 --> C6["p[1] + r[0]"]
-  C1 -- i = 1 --> D1["p[1] + r[1]"]
-  C1 -- i = 2 --> D2["p[2] + r[0]"]
-  C2 -- i = 1 --> D3["p[1] + r[0]"]
-  D1 -- i = 1 --> E1["p[1] + r[0]"]
-```
 
 ## Bottom-Up Tabulation
-- Each home that has non-negative value shows values of revenue.
-- In each column the biggest value is maximum revenue that obtains from rod of length `j`.
-- `-` this notion for infinity value or initialize value of arrays or shows that haven't valuable value.
-
-
-| `i\j` | 0 | 1 | 2 | 3 |  4   |
-|:-----:|---|---|---|---|:----:|
-|   0   | 0 | - | - | - |  -   |
-|   1   | - | 1 | 2 | 6 |  9   |
-|   2   | - | - | 5 | 6 |  10  |
-|   3   | - | - | - | 8 |  9   |
-|   4   | - | - | - | - |  9   |

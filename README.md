@@ -11,7 +11,7 @@ I have covered the algorithms that are related to the Design Algorithms course o
 
 - Dynamic Programming
   - Rod Cutting [[docs]](docs/rodCutting.md) | [[code]](src/dynamicProgarmming/rodcut)
-  - Matrix-chain Multiplication 
+  - Matrix-chain Multiplication [[docs]](docs/matrixChain.md) | [[code]](src/dynamicProgarmming/matrixchain) 
   - Knapsack
   - Fibonacci [[docs]](docs/fibonacci.md) | [[code]](src/dynamicProgarmming/fibonacci)
   - Coin Change

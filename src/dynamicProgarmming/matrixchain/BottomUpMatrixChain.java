@@ -1,6 +1,8 @@
 package dynamicProgarmming.matrixchain;
 
 public class BottomUpMatrixChain {
+    public static void main(String[] args){
+    }
     public int bottomUpMatrixChain(int p[], int s[][]) {
         int n = p.length;
         int r[][] = new int[n - 1][n - 1];

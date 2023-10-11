@@ -38,4 +38,18 @@ public class IncrementBinaryCounter {
         if( i >= 0)
             a[i] = 1;
     }
+
+
+    // This increment function implementing with for loop
+    public static void increment2(int[] a){
+        int k = a.length;
+        for( int i = k - 1; i >= 0; i--){
+            if(a[i] == 1){
+                a[i] = 0;
+            }else{
+                a[i] = 1;
+                return;
+            }
+        }
+    }
 }

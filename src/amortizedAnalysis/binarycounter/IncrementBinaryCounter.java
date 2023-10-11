@@ -3,7 +3,27 @@ package amortizedAnalysis.binarycounter;
 public class IncrementBinaryCounter {
     public static void main(String[] args){
 
-
+        // example for increment1 function
+        int[] arr1 = new int[4];
+        System.out.print("Input Number:    ");
+        for (int e:
+                arr1) {
+            System.out.print(" "+ e);
+        }
+        increment1(arr1);
+        System.out.println("\n================");
+        System.out.print("First increment: ");
+        for (int e:
+                arr1) {
+            System.out.print(" "+ e);
+        }
+        increment1(arr1);
+        System.out.print("\n================\n");
+        System.out.print("Second increment:");
+        for (int e:
+                arr1) {
+            System.out.print(" "+ e);
+        }
     }
 
     // This increment function implementing with while loop

@@ -26,6 +26,8 @@ I have covered the algorithms that are related to the Design Algorithms course o
   
 
 - Amortized Analysis 
-  - Increment Binary Counter
+  - Binary Counter
+    - Increment Binary Counter [[code]](src/amortizedAnalysis/binarycounter/IncrementBinaryCounter.java)
+    - Decrement Binary Counter
   - Stack operation
   - Dynamic Array

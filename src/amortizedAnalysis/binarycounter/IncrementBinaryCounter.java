@@ -1,30 +1,30 @@
 package amortizedAnalysis.binarycounter;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class IncrementBinaryCounter {
     public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number of bit in your binary number:");
+        int numBit = sc.nextInt();
 
         // example for increment1 function
-        int[] arr1 = new int[4];
-        System.out.print("Input Number:    ");
-        for (int e:
-                arr1) {
-            System.out.print(" "+ e);
+        int[] arr = new int[numBit];
+        System.out.println("Enter your initial bit of number for counting :");
+
+        for(int i=0; i<numBit; i++) {
+            arr[i] = sc.nextInt();
         }
-        increment1(arr1);
-        System.out.println("\n================");
-        System.out.print("First increment: ");
-        for (int e:
-                arr1) {
-            System.out.print(" "+ e);
+
+        System.out.println("Enter number of increment operation:");
+        int numInc = sc.nextInt();
+        for (int i = 0; i < numInc ; i++){
+            System.out.println(Arrays.toString(arr));
+            increment1(arr);
         }
-        increment1(arr1);
-        System.out.print("\n================\n");
-        System.out.print("Second increment:");
-        for (int e:
-                arr1) {
-            System.out.print(" "+ e);
+
         }
-    }
 
     // This increment function implementing with while loop
     // in this function input parameter msb is a[0] and a[a.length - 1] is lsb

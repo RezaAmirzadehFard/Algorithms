@@ -5,7 +5,7 @@ This is a lovely repository for algorithms.
 
 Most of the codes are based on existing algorithms in CLRS Book.
 
-I have covered the algorithms that are related to the Design Algorithms course of Persian gulf university, and I hope there will more...
+I have covered the algorithms that are related to the Algorithms Design course of Persian Gulf University, and I hope there will more...
 
 ## Headlines
 

@@ -5,7 +5,7 @@ This is a lovely repository for algorithms.
 
 Most of the codes are based on existing algorithms in CLRS Book.
 
-I have covered the algorithms that are related to the Algorithms Design course of Persian Gulf University, and I hope there will more...
+I have covered the algorithms that are related to the Algorithms Design course of Persian Gulf University, and I hope there will be more...
 
 ## Headlines
 
@@ -28,6 +28,6 @@ I have covered the algorithms that are related to the Algorithms Design course o
 - Amortized Analysis 
   - Binary Counter
     - Increment Binary Counter [[code]](src/amortizedAnalysis/binarycounter/IncrementBinaryCounter.java)
-    - Decrement Binary Counter
+    - Decrement Binary Counter [[code]](src/amortizedAnalysis/binarycounter/DecrementBinaryCounter.java)
   - Stack operation
   - Dynamic Array

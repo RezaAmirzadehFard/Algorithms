@@ -1,6 +1,6 @@
 # Rod Cutting
 ## Problem :
- >Given rod...
+ >Given a rod of length `n` inches and table of prices `pi` for `i=1,2,...,n`, determine the maximum revenue `rn` obtainable by cutting up the rod and selling the pieces.
 ## Recursive Formula :
 - `n` is length of rod
 - `i` is an index that shows feasible location for cutting

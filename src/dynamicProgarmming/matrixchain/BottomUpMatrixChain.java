@@ -37,7 +37,7 @@ public class BottomUpMatrixChain {
 
         for (int l = 2; l <= n; l++) {
             int min = Integer.MAX_VALUE;
-            for (int i = 1; i <= l + i - 1; i++) {
+            for (int i = 1; i <= n - l + 1; i++) {
                 int j = l + i - 1;
                 for (int k = i; k <= j; k++) {
                     int q = m[i][k] + m[k][j] + p[i - 1] * p[k] * p[j];

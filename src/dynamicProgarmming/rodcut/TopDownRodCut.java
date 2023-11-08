@@ -8,8 +8,8 @@ public class TopDownRodCut {
         int[] revenue = new int[price.length];
 
         TopDownRodCut tdRodCut = new TopDownRodCut();
-        int r1 = tdRodCut.topDownRudCut(price,4,revenue);
-        //System.out.println(r1);
+        int r1 = tdRodCut.topDownRudCut(price,8,revenue);
+        System.out.println(r1);
 
         //================================================//
 

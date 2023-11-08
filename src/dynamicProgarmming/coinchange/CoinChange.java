@@ -7,16 +7,16 @@ public class CoinChange {
             return 0;
         }
 
-        // Initialize minimum number of coins required to be the maximum possible value
+        // Initialize the minimum number of coins required to be the maximum possible value
         int minCoins = Integer.MAX_VALUE;
 
         // Try using each coin denomination to make change for amount
         for (int i = 0; i < coins.length; i++) {
             if (coins[i] <= amount) {
-                // Recursive call to find minimum number of coins required to make change for amount - coins[i]
+                // Recursive call to find the minimum number of coins required to make change for amount - coins[i]
                 int numCoins = coinChange(coins, amount - coins[i]);
 
-                // Update minimum number of coins required if numCoins is smaller
+                // Update the minimum number of coins required if numCoins is smaller
                 if (numCoins != Integer.MAX_VALUE && numCoins + 1 < minCoins) {
                     minCoins = numCoins + 1;
                 }

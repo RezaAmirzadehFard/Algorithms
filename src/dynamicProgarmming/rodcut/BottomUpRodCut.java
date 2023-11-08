@@ -2,6 +2,7 @@ package dynamicProgarmming.rodcut;
 
 public class BottomUpRodCut {
     // Implementation the rod cut problem with bottom-up approach
+    // method 1
     public int bottomUpRodCut(int p[], int n) {
         int r[] = new int[n + 1];
 
@@ -24,7 +25,7 @@ public class BottomUpRodCut {
 
 
     // based on CLRS pseudocode
-
+    // method 2
     public static int bottomUpROdCut(int[] p, int n){
         // init an array to store solutions of subproblems
         int[] r = new int[n+1];

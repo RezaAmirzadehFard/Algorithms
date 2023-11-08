@@ -29,6 +29,7 @@ public class MatrixChain {
 
         int result = m.matrixProduct(p, 1, 5);
 
+        System.out.println(result);
 
     }
 }

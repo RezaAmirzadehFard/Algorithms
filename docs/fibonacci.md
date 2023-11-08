@@ -1,6 +1,6 @@
 # Fibonacci
 ## Problem :
->Given a number...
+>Given a dynamic programming algorithm to compute the nth Fibonacci number.
 ## Recursive Formula :
 - `n` is nth number of the fibonacci sequence.
 - Fibonacci sequence start like 0,1,1,2,3,5,8,13,21,...
@@ -35,7 +35,7 @@ public class TopDown {
     }
 }
 ```
-> You need a find maximum method to above code works well. For complete code, details and other forms [click](dynamicProgarmming/fibonacci/TopDownFibonacci.java).
+> You need a find maximum method to above code works well. For complete code, details and other forms [click](src/dynamicProgarmming/fibonacci/TopDownFibonacci.java).
 
 
 
@@ -55,7 +55,7 @@ public class BottomUp {
     }
 }
 ```
-> You need a find maximum method to above code works well. For complete code, details and other forms [click](dynamicProgarmming/fibonacci/BottomUpFibonacci.java).
+> You need a find maximum method to above code works well. For complete code, details and other forms [click](src/dynamicProgarmming/fibonacci/BottomUpFibonacci.java).
 
 ### Example:
  #### Given Fibonacci Number Table
@@ -111,7 +111,7 @@ rod with length of 5:
 <!-- 
 - parent label `s`
 - child label `t`
-- an edge from parent to child corresponds -to cutting of an initial piece of size `s-t` and remainder of size `t`.
+- an edge from parent to child corresponds to cutting of an initial piece of size `s-t` and remainder of size `t`.
 - -->
 ```mermaid
 graph TD

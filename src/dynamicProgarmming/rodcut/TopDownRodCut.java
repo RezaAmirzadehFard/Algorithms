@@ -18,7 +18,7 @@ public class TopDownRodCut {
         int r2 = TopDownRodCut.memoizedRodCut(price,4);
         //System.out.println(r2);
     }
-
+    // method 1
     public int topDownRudCut(int p[], int n, int r[]) {
         if (n == 0 || n == 1) {
             return p[n];
@@ -37,8 +37,8 @@ public class TopDownRodCut {
         return max;
     }
 
+    // method 2
     // based on CLRS pseudocode
-
     // Top-Down
     public static int memoizedRodCut(int[] p,int n){
         int[] r = new int[n+1];

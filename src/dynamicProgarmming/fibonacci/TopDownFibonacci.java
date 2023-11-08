@@ -15,7 +15,8 @@ public class TopDownFibonacci {
         }
 
     }
-
+    // We can write top-down fibonacci function in two ways.
+    // Method 1
     public static int fibonacciTopDown(int n, int[] memo) {
         if(n==0 || n == 1)
             return n;
@@ -30,6 +31,7 @@ public class TopDownFibonacci {
         return q;
     }
 
+    // method 2
     public static int memoizedFibonacci(int n){
         int[] r = new int[n+1];
         for (int i = 0; i <=n; i++){

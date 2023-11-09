@@ -1,38 +1,33 @@
 package dynamicProgarmming.coinchange;
 
 public class CoinChange {
-    public static int coinChange(int[] coins, int amount) {
+    public static int coinChange(int[] coins,int n, int m) {
         // Base case: no coins needed to make change for 0
-        if (amount == 0) {
+        if (m == 0) {
             return 0;
+        } else if (n == 0) {
+            return Integer.MAX_VALUE;
         }
 
-        // Initialize the minimum number of coins required to be the maximum possible value
-        int minCoins = Integer.MAX_VALUE;
-
-        // Try using each coin denomination to make change for amount
-        for (int i = 0; i < coins.length; i++) {
-            if (coins[i] <= amount) {
-                // Recursive call to find the minimum number of coins required to make change for amount - coins[i]
-                int numCoins = coinChange(coins, amount - coins[i]);
-
-                // Update the minimum number of coins required if numCoins is smaller
-                if (numCoins != Integer.MAX_VALUE && numCoins + 1 < minCoins) {
-                    minCoins = numCoins + 1;
-                }
+        if (coins[n] > m) {
+            return coinChange(coins,n-1,m);
+        }else {
+            int p = coinChange(coins, n - 1, m);
+            int q = coinChange(coins, n, m - coins[n]) + 1;
+            if (q > p) {
+                return p;
+            } else {
+                return q;
             }
         }
-
-        // Return the minimum number of coins required
-        return minCoins;
     }
 
     // coinChange
     public static void main(String[] args) {
-        int[] coins = {1, 5, 10, 25}; // Example set of coin denominations
-        int amount = 27; // Example amount to make change for
-
-        int minCoins = coinChange(coins, amount);
+        int[] coins = {0, 1, 4, 6}; // Example set of coin denominations
+        int m = 8; // Example amount to make change for
+        int n = coins.length - 1;
+        int minCoins = coinChange(coins,n, m);
         System.out.println("Minimum number of coins required: " + minCoins);
     }
 }

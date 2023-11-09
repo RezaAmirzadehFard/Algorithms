@@ -51,6 +51,9 @@ public class TopDownKnapsack {
         int result = kp.topDownKnapsack(v, w, kpw, 6, b);
 
         System.out.println(result);
+        kp.printItem(b,w,5,kpw);
+
+
 
     }
 }

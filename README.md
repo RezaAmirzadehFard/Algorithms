@@ -12,9 +12,9 @@ I have covered the algorithms that are related to the Algorithms Design course o
 - Dynamic Programming
   - Rod Cutting [[docs]](docs/rodCutting.md) | [[code]](src/dynamicProgarmming/rodcut)
   - Matrix-chain Multiplication [[docs]](docs/matrixChain.md) | [[code]](src/dynamicProgarmming/matrixchain) 
-  - Knapsack
+  - Knapsack [docs] | [[code]](src/dynamicProgarmming/knapsack)
   - Fibonacci [[docs]](docs/fibonacci.md) | [[code]](src/dynamicProgarmming/fibonacci)
-  - Coin Change
+  - Coin Change [docs] | [[code]](src/dynamicProgarmming/coinchange)
   - Longest Common Subsequence
   - Optimal Binary Search Tree
 

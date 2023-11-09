@@ -1,7 +1,7 @@
 package dynamicProgarmming.coinchange;
 
 public class TopDownCoinChange {
-    public static int coinChange(int[] coins,int n, int m, int[][] memo) {
+    public static int topDownCoinChange(int[] coins, int n, int m, int[][] memo) {
         // Base case: no coins needed to make change for 0
         if (m == 0) {
             return 0;
@@ -14,12 +14,12 @@ public class TopDownCoinChange {
             return memo[n][m];
         }
         if (coins[n] > m) {
-            int p = coinChange(coins, n - 1, m, memo);
+            int p = topDownCoinChange(coins, n - 1, m, memo);
             memo[n][m] = p;
             return p;
         } else {
-            int p = coinChange(coins, n - 1, m, memo);
-            int q = coinChange(coins, n, m-coins[n], memo) + 1;
+            int p = topDownCoinChange(coins, n - 1, m, memo);
+            int q = topDownCoinChange(coins, n, m-coins[n], memo) + 1;
             if (q > p) {
                 memo[n][m] = p;
                 return p;
@@ -45,7 +45,7 @@ public class TopDownCoinChange {
             }
         }
 
-        int minCoins = coinChange(coins,n, amount, memo);
+        int minCoins = topDownCoinChange(coins,n, amount, memo);
         System.out.println("Minimum number of coins required: " + minCoins);
     }
 }

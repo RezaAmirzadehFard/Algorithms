@@ -31,10 +31,10 @@ public class TopDownCoinChange {
 
     // Top-Down coin change
     public static void main(String[] args) {
-        int[] coins = {0, 1, 5, 10, 25}; // Example set of coin denominations
-        int amount = 27; // Example amount to make change for
+        int[] coins = {0, 1, 4, 6}; // Example set of coin denominations
+        int amount = 8; // Example amount to make change for
         int n = coins.length - 1;
-        int[][] memo = new int[n+1][n+1]; // Memoization table
+        int[][] memo = new int[n+1][amount+1]; // Memoization table
 
 
         for (int i = 0; i < memo.length; ++i) {

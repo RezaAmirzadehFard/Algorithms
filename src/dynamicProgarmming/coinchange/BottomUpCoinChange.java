@@ -6,12 +6,12 @@ public class BottomUpCoinChange {
 
         for (int j = 1; j < m; ++j) {
             for (int i = 1; i <= n; ++i) {
-                //r[j,i] = r[n,m]
+                //r[i,j] = r[n,m]
                 if (coins[n] > j) {
                     r[i][j] = r[i - 1][j];
                 } else {
                     int q = r[i-1][j];
-                    int p = r[j - 1][j - coins[i]] + 1;
+                    int p = r[i][j - coins[i]] + 1;
 
                     if (q > p) {
                         r[i][j] = p;

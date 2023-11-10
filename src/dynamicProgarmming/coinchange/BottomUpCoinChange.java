@@ -7,6 +7,7 @@ public class BottomUpCoinChange {
         for (int j = 1; j < m; ++j) {
             for (int i = 1; i <= n; ++i) {
                 //r[i,j] = r[n,m]
+                r[0][j] = Integer.MAX_VALUE;
                 if (coins[n] > j) {
                     r[i][j] = r[i - 1][j];
                 } else {

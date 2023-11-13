@@ -1,15 +1,13 @@
-# Rod Cutting
+# Knapsack 0-1
 ## Problem :
- >Given a rod of length `n` inches and table of prices `pi` for `i=1,2,...,n`, determine the maximum revenue `rn` obtainable by cutting up the rod and selling the pieces.
+>Given a 
 ## Recursive Formula :
-- `n` is length of rod
-- `i` is an index that shows feasible location for cutting
-- `p[]` is an array that shows price of rod without cutting
-- `r[]` is an array that store maximum revenue obtains by cutting up the rod of length n
 
 ### Formula :
 
-`r[n]= max(p[i] + r[n-i])` & `1 <= i <= n`
+`r[n,W] = if wn > W : r[n-1 , W]
+else max(r[n-1 , W], r[n-1 , W - wn] + vn)`
+        
 
 ## Top-Down :
 ```java
@@ -67,7 +65,7 @@ public class BottomUp {
 | length `i` | 0 | 1 | 2 | 3 | 4 | 5  | 6  | 7  | 8  | 9  | 10 |
 |------------|---|---|---|---|---|----|----|----|----|----|----|
 | price `i`  | 0 | 1 | 5 | 8 | 9 | 10 | 17 | 17 | 20 | 24 | 30 |
-  
+
 - If we have a rod of length, 5 and want to cut up the rod and selling with maximum revenue or cost, we can obtain the cost with recursive formula:
 
 rod with length of 5:
@@ -85,28 +83,28 @@ rod with length of 5:
 
 - `r[4]= max(p[i] + r[4-i])` & `1 <= i <= 4`
 
-  - [ ] `i = 1` ==> p[1] + r[3] = 9
-  - [x] `i = 2` ==> p[2] + r[2] = 10
-  - [ ] `i = 3` ==> p[3] + r[1] = 9
-  - [ ] `i = 4` ==> p[4] + r[0] = 9
+    - [ ] `i = 1` ==> p[1] + r[3] = 9
+    - [x] `i = 2` ==> p[2] + r[2] = 10
+    - [ ] `i = 3` ==> p[3] + r[1] = 9
+    - [ ] `i = 4` ==> p[4] + r[0] = 9
 
 
 - `r[3]= max(p[i] + r[3-i])` & `1 <= i <= 3`
 
-  - [ ] `i = 1` ==> p[1] + r[2] = 6
-  - [ ] `i = 2` ==> p[2] + r[1] = 6
-  - [x] `i = 3` ==> p[3] + r[0] = 8
+    - [ ] `i = 1` ==> p[1] + r[2] = 6
+    - [ ] `i = 2` ==> p[2] + r[1] = 6
+    - [x] `i = 3` ==> p[3] + r[0] = 8
 
 
 - `r[2]= max(p[i] + r[2-i])` & `1 <= i <= 2`
 
-  - [ ] `i = 1` ==> p[1] + r[1] = 2 
-  - [x] `i = 2` ==> p[2] + r[0] = 5
+    - [ ] `i = 1` ==> p[1] + r[1] = 2
+    - [x] `i = 2` ==> p[2] + r[0] = 5
 
 
 - `r[1]= max(p[i] + r[1-i])` & `1 <= i <= 1`
 
-  - [x] `i = 1` ==> p[1] + r[0] = 1
+    - [x] `i = 1` ==> p[1] + r[0] = 1
 
 
 - `r[0] = 0` ==> base condition

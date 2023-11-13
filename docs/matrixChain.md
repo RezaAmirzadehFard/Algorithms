@@ -64,6 +64,10 @@ public class BottomUp {
 ```
 > You need a find maximum method to above code works well. For complete code, details and other forms [click](dynamicProgarmming/rodcut/BottomUpRodCut.java).
 -->
+
+## Time Complexity:
+- O(n^3)
+
 ### Example:
 <!--
 #### Given Price Table

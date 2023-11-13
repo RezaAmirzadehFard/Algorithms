@@ -22,7 +22,7 @@ I have covered the algorithms that are related to the Algorithms Design course o
 - Greedy
   - Fractional Knapsack
   - Activity Selection
-  - Huffman Codes
+  - Huffman Codes [[code]](src/greedy/HuffmanCoding.java)
   
 
 - Amortized Analysis 

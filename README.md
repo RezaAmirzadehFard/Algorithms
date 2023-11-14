@@ -31,3 +31,9 @@ I have covered the algorithms that are related to the Algorithms Design course o
     - Decrement Binary Counter [[code]](src/amortizedAnalysis/binarycounter/DecrementBinaryCounter.java)
   - Stack operation
   - Dynamic Array [[code]](src/amortizedAnalysis/DynamicArray.java)
+  
+
+- Elementary Graph Algorithms
+  - Breadth-First Search
+  - Depth-First Search
+  - Topological Sort

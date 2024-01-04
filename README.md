@@ -34,6 +34,6 @@ I have covered the algorithms that are related to the Algorithms Design course o
   
 
 - Elementary Graph Algorithms
-  - Breadth-First Search [[code]](src/elementaryGraphAlgoithms/breadthfirstsearch/BreadthFirstSearch.java)
+  - Breadth-First Search [[docs]](docs/bfs.md) | [[code]](src/elementaryGraphAlgoithms/breadthfirstsearch/BreadthFirstSearch.java)
   - Depth-First Search
   - Topological Sort

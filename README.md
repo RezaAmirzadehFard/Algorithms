@@ -36,12 +36,12 @@ I have covered the algorithms that are related to the Algorithms Design course o
 
 - Elementary Graph Algorithms
   - Breadth-First Search [[docs]](docs/bfs.md) | [[code]](src/elementaryGraphAlgoithms/breadthfirstsearch/BreadthFirstSearch.java)
-  - Depth-First Search
+  - Depth-First Search [docs] | [[code]](src/elementaryGraphAlgoithms/depthfirstsearch/DepthFirstSearch.java)
     - Topological Sort
 
 
 ---
-In manner of algorithm you have two approaches to become human being:
+In the manner of algorithm, you have two approaches to become human being:
 
 If you stay on `Top` position, you should reach to `Down` to become a human.
 Or if you stay in `Bottom` position, you should arrive to `Up` to become a human. 

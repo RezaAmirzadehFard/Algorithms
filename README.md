@@ -7,6 +7,7 @@ Most of the codes are based on existing algorithms in CLRS Book.
 
 I have covered the algorithms that are related to the Algorithms Design course of Persian Gulf University, and I hope there will be more...
 
+
 ## Headlines
 
 - Dynamic Programming
@@ -22,7 +23,7 @@ I have covered the algorithms that are related to the Algorithms Design course o
 - Greedy
   - Fractional Knapsack
   - Activity Selection
-  - Huffman Codes [docs](docs/huffman.md) | [code](src/greedy/HuffmanCoding.java)
+  - Huffman Codes [[docs]](docs/huffman.md) | [[code]](src/greedy/HuffmanCoding.java)
   
 
 - Amortized Analysis 
@@ -36,4 +37,11 @@ I have covered the algorithms that are related to the Algorithms Design course o
 - Elementary Graph Algorithms
   - Breadth-First Search [[docs]](docs/bfs.md) | [[code]](src/elementaryGraphAlgoithms/breadthfirstsearch/BreadthFirstSearch.java)
   - Depth-First Search
-  - Topological Sort
+    - Topological Sort
+
+
+---
+In manner of algorithm you have two approaches to become human being:
+
+If you stay on `Top` position, you should reach to `Down` to become a human.
+Or if you stay in `Bottom` position, you should arrive to `Up` to become a human. 

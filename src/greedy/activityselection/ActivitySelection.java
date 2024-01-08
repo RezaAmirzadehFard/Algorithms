@@ -1,4 +1,4 @@
-package greedy;
+package greedy.activityselection;
 
 import java.util.ArrayList;
 import java.util.Comparator;

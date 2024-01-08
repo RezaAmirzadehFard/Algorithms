@@ -7,6 +7,9 @@ import java.util.List;
 public class ActivitySelection {
 
     public static void main(String[] args){
+
+        // create activity instance
+
         Activity a1 = new Activity("a1",1,4);
         Activity a2 = new Activity("a2",3,5);
         Activity a3 = new Activity("a3",0,6);
@@ -19,6 +22,7 @@ public class ActivitySelection {
         Activity a10 = new Activity("a10",2,14);
         Activity a11 = new Activity("a11",12,16);
 
+        // add activities to the list
         List<Activity> activityList = new ArrayList<>();
         activityList.add(a1);
         activityList.add(a2);
@@ -32,6 +36,10 @@ public class ActivitySelection {
         activityList.add(a10);
         activityList.add(a11);
 
+        // The total time that we have
+        int n = 16;
+
+        // Representing activities
         System.out.println("\n############# List of activities #############\n");
         System.out.println("activity\t start \t finish\t");
 
@@ -39,12 +47,16 @@ public class ActivitySelection {
             System.out.println(activity.name +"\t\t\t "+ activity.start +"\t\t "+ activity.finish+"\t");
         }
 
+        // Representing a result of activity selection algorithm
         System.out.println("\n############# Result #############\n");
 
         List<Activity> ac = greedyActivitySelector(activityList);
+        System.out.println(activityList.size());
 
-        System.out.println("activity\t s\t f\t|=================");
-        System.out.println("--------------------------------------");
+        System.out.print("Activity\t s\t f\t|");
+        for (int i = 0; i< n;i++) System.out.print("=");
+        System.out.println("\n-------------------------------------");
+
         for(var activity: ac) {
             System.out.print(activity.name +"\t\t\t "+ activity.start +"\t "+ activity.finish+"\t|");
             int duration = activity.finish - activity.start;

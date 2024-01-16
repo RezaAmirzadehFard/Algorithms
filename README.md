@@ -20,9 +20,9 @@ I have covered the algorithms that are related to the Algorithms Design course o
   - Optimal Binary Search Tree [docs] | [code]
 
 
-- Greedy
+- Greedy 
   - Fractional Knapsack
-  - Activity Selection [[docs]] | [[code]](src/greedy/activityselection/ActivitySelection.java)
+  - Activity Selection [docs] | [[code]](src/greedy/activityselection/ActivitySelection.java)
   - Huffman Codes [[docs]](docs/huffman.md) | [[code]](src/greedy/huffman/HuffmanCoding.java)
   
 
@@ -31,14 +31,26 @@ I have covered the algorithms that are related to the Algorithms Design course o
     - Increment Binary Counter [[code]](src/amortizedAnalysis/binarycounter/IncrementBinaryCounter.java)
     - Decrement Binary Counter [[code]](src/amortizedAnalysis/binarycounter/DecrementBinaryCounter.java)
   - Stack operation
-  - Dynamic Array [[code]](src/amortizedAnalysis/DynamicArray.java)
+  - Dynamic Array [[code]](src/amortizedAnalysis/dynamicarray/DynamicArray.java)
   
 
 - Elementary Graph Algorithms
   - Breadth-First Search [[docs]](docs/bfs.md) | [[code]](src/elementaryGraphAlgoithms/breadthfirstsearch/BreadthFirstSearch.java)
   - Depth-First Search [docs] | [[code]](src/elementaryGraphAlgoithms/depthfirstsearch/DepthFirstSearch.java)
-    - Topological Sort
 
+
+- Minimum Spanning Trees
+  - Kruskal's Algorithm
+  - Prim's Algorithm
+
+
+- Single-Source Shortest Paths
+  - The Bellman-Ford Algorithm
+  - Dijkstra’s Algorithm
+
+
+- All-Pairs Shortest Paths
+  - The Floyd-Warshall algorithm
 
 ---
 In the manner of algorithm, you have two approaches to become human being:

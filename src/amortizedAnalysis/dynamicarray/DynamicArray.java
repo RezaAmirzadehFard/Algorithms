@@ -1,4 +1,4 @@
-package amortizedAnalysis;
+package amortizedAnalysis.dynamicarray;
 
 
 import java.util.Arrays;

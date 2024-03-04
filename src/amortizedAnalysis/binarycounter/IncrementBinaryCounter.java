@@ -23,7 +23,7 @@ public class IncrementBinaryCounter {
 
                 System.out.println("Enter number of increment operation:");
                 int numInc = sc.nextInt();
-                for (int i = 0; i < numInc ; i++){
+                for (int i = 0; i <= numInc ; i++){
                     System.out.println(Arrays.toString(arr));
                     increment1(arr);
                 }

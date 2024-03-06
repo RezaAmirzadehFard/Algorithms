@@ -9,7 +9,7 @@ public class BottomUpRodCut {
         if (n <= 1) {
             r[n] = p[n];
         }
-
+        r[1] = p[1];
         for (int l = 2; l <= n; l++) {
             int max = -1;
             for (int k = 1; k <= l; k++) {

@@ -1,6 +1,6 @@
 # Longest Common Subsequence
 ## Problem :
->Given two sequences  `X = <x1, x2,...,xm>` and `Y = <y1, y2,...,yn>` and we wish to find a `Z` that maximum longest common subsequence of `X` and `Y` .
+>Given an sequence  `X = <x1, x2,...,xm>` and we wish to find a `Z` that maximum longest palindrome subsequence of `X`.
 ## Recursive Formula :
 <!--
 - `i` is an index that shows feasible location for cutting
@@ -9,18 +9,20 @@
 -->
 ### Formula :
 
-
 ```
 c[i,j] = if xi = yj and i > j > 0:
-            c[i-1, j-1] + 1
+            c[i+1, j-1] + 2
             
          if xi != yj and i > j > 0:
-            max(c[i,j-1], c[i-1,j])
+            max(c[i,j-1], c[i+1,j])
             
-         if i = 0 or j = 0:
+         if i = j:
+            1
+         
+         if i > j:
             0
 ```
-
+<!--
 ## Top-Down :
 ```java
 public class TopDown {
@@ -231,3 +233,4 @@ LCS of X = <A, B, C, B, D, A, B> and Y = < B, D, C, A, B, A>:
 |   5   | D  | 0  | 1 | 2 | 2 | 2 | 3 | 3 |
 |   6   | A  | 0  | 1 | 2 | 2 | 3 | 3 | 4 |
 |   7   | B  | 0  | 1 | 2 | 2 | 3 | 4 | 4 |
+-->

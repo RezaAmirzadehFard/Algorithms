@@ -7,7 +7,7 @@ public class BottomUpKnapsack {
         for (int i = 1; i < kpw; ++i) {
             for (int j = 1; j <= n; ++j) {
                 //r[j,i] = r[n,kpw]
-                if (w[n] > i) {
+                if (w[j] > i) {
                     r[j][i] = r[j - 1][i];
                 } else {
                     int q = r[j - 1][i];

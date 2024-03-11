@@ -2,9 +2,11 @@ package dynamicProgarmming.longestcommonsubsequence;
 
 public class BottomUpLCS {
     public static void main(String[] args){
-        char[] x = {'A','B','C','B','D','A','B'};
-        char[] y = {'B','D','C','A','B','A'};
-        int lcs = bottomUpLongestCommonSubsequence(x,y,5,6);
+        //char[] x = {'A','B','C','B','D','A','B'};
+        char[] x = {'D','A','B','C','B','D','A','B','C'};
+        //char[] y = {'B','D','C','A','B','A'};
+        char[] y = {'B','D','C','A','B','C','A'};
+        int lcs = bottomUpLongestCommonSubsequence(x,y,9,7);
         System.out.println(lcs);
     }
     public static int bottomUpLongestCommonSubsequence(char[] x, char[] y, int m, int n){

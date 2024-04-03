@@ -1,22 +1,32 @@
 package dynamicProgarmming.knapsack;
 
 public class BottomUpKnapsack {
-    static int bottomUpKnapsack(int[] w, int[] v, int kpw, int n, int[][] s) {
+
+    public static void main(String[] args) {
+        int[] value = {0, 1, 2, 3};
+        int[] weight = {0, 4, 5, 1};
+        int number = 3;
+        int knapsackWeight = 4;
+
+        int kp = bottomUpKnapsack(weight, value, knapsackWeight, number);
+        System.out.println(kp);
+    }
+
+    public static int bottomUpKnapsack(int[] w, int[] v, int kpw, int n) {
         int r[][] = new int[n + 1][kpw + 1];
 
-        for (int i = 1; i < kpw; ++i) {
-            for (int j = 1; j <= n; ++j) {
-                //r[j,i] = r[n,kpw]
-                if (w[j] > i) {
-                    r[j][i] = r[j - 1][i];
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= kpw; ++j) {
+                //r[i,j] = r[n,kpw]
+                if (w[i] > j) {
+                    r[i][j] = r[i - 1][j];
                 } else {
-                    int q = r[j - 1][i];
-                    int p = r[j - 1][i - w[j]] + v[j];
-
+                    int q = r[i - 1][j];
+                    int p = r[i - 1][j - w[i]] + v[i];
                     if (q > p) {
-                        r[j][i] = q;
+                        r[i][j] = q;
                     } else {
-                        r[j][i] = p;
+                        r[i][j] = p;
                     }
                 }
             }
@@ -24,12 +34,4 @@ public class BottomUpKnapsack {
         return r[n][kpw];
     }
 
-    public void printItem(int[][] c, int[] w, int n, int kpw) {
-        if (n == 0 || kpw == 0) {
-            return;
-        }
-        System.out.println(c[n][kpw]);
-
-        printItem(c, w, n - c[n][kpw], kpw - w[c[n][kpw]]);
-    }
 }

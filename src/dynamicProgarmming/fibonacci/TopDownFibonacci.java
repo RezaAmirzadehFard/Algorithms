@@ -3,7 +3,7 @@ package dynamicProgarmming.fibonacci;
 import java.util.Scanner;
 
 public class TopDownFibonacci {
-    // Top Down
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter the number of terms in the Fibonacci sequence: ");

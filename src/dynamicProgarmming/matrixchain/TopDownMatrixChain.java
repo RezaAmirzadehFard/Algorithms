@@ -1,6 +1,14 @@
 package dynamicProgarmming.matrixchain;
 
 public class TopDownMatrixChain {
+    public static void main(String[] args) {
+        TopDownMatrixChain tdMatrixChain = new TopDownMatrixChain();
+        int[] p = {30, 35, 15, 5, 10, 20, 25};
+        int[][] memo = new int[p.length][p.length];
+        int m = tdMatrixChain.topDownMatrixProduct(p, 1, 6, memo);
+        System.out.println(m);
+    }
+
     //  Top to Down (memoization)
     public int topDownMatrixProduct(int[] p, int i, int j, int[][] m) {
         if (i >= j) {

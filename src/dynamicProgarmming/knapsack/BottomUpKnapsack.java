@@ -13,7 +13,7 @@ public class BottomUpKnapsack {
     }
 
     public static int bottomUpKnapsack(int[] w, int[] v, int kpw, int n) {
-        int r[][] = new int[n + 1][kpw + 1];
+        int[][] r = new int[n + 1][kpw + 1];
 
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= kpw; ++j) {

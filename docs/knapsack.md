@@ -45,28 +45,27 @@ public class TopDown {
 ## Bottom-Up :
 ```java
 public class BottomUp {
-  static int bottomUpKnapsack(int[] w, int[] v, int kpw, int n, int[][] s) {
-    int r[][] = new int[n + 1][kpw + 1];
+    public static int bottomUpKnapsack(int[] w, int[] v, int kpw, int n) {
+        int r[][] = new int[n + 1][kpw + 1];
 
-    for (int i = 1; i < kpw; ++i) {
-      for (int j = 1; j <= n; ++j) {
-        //r[j,i] = r[n,kpw]
-        if (w[j] > i) {
-          r[j][i] = r[j - 1][i];
-        } else {
-          int q = r[j - 1][i];
-          int p = r[j - 1][i - w[j]] + v[j];
-
-          if (q > p) {
-            r[j][i] = q;
-          } else {
-            r[j][i] = p;
-          }
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= kpw; ++j) {
+                //r[i,j] => r[n,kpw]
+                if (w[i] > j) {
+                    r[i][j] = r[i - 1][j];
+                } else {
+                    int q = r[i - 1][j];
+                    int p = r[i - 1][j - w[i]] + v[i];
+                    if (q > p) {
+                        r[i][j] = q;
+                    } else {
+                        r[i][j] = p;
+                    }
+                }
+            }
         }
-      }
+        return r[n][kpw];
     }
-    return r[n][kpw];
-  }
 }
 ```
 > You need a find maximum method to above code works well. For complete code, details and other forms [click](src/dynamicProgarmming/knapsack/BottomUpKnapsack.java).

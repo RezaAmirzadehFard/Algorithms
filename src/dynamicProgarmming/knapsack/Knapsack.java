@@ -1,7 +1,16 @@
 package dynamicProgarmming.knapsack;
 
 public class Knapsack {
-    public int knapsack(int[] v, int[] w, int kpw, int n) {
+    public static void main(String[] args){
+        int[] value = {0,1,2,3};
+        int[] weight = {0,4,5,1};
+        int number = 3;
+        int knapsackWeight = 4;
+
+        int kp = knapsack(value, weight, knapsackWeight ,number);
+        System.out.println(kp);
+    }
+    public static int knapsack(int[] v, int[] w, int kpw, int n) {
         if (kpw == 0 || n == 0) {
             return 0;
         }
@@ -16,14 +25,5 @@ public class Knapsack {
                 return p;
             }
         }
-    }
-
-    public void printItem(int[][] c, int[] w, int n, int kpw) {
-        if (n == 0 || kpw == 0) {
-            return;
-        }
-        System.out.println(c[n][kpw]);
-
-        printItem(c, w, n - c[n][kpw], kpw - w[c[n][kpw]]);
     }
 }

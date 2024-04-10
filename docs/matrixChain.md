@@ -43,31 +43,31 @@ public class TopDown {
 
 ```java
 public class BottomUp {
-    public static int[][] matrixChainOrder(int[] p) {
-        int n = p.length - 1;       // because p have indices of 0,1,...,n-1,n => length of p is n+1
-        int[][] m = new int[n][n];
-        int[][] s = new int[n][n];
+  public static int[][] matrixChainOrder(int[] p) {
+    int n = p.length - 1;       // because p have indices of 0,1,...,n-1,n => length of p is n+1
+    int[][] m = new int[n + 1][n + 1];
+    int[][] s = new int[n + 1][n + 1];
 
-        for (int i = 0; i < n; i++) { // the minimum cost for sequences with size of one
-            m[i][i] = 0;
-        }
-
-        for (int l = 2; l <= n; l++) { // is the chain length
-            int min = Integer.MAX_VALUE;
-            for (int i = 1; i <= n - l + 1; i++) { // [1]*
-                int j = l + i - 1;
-                for (int k = i; k <= j; k++) { // find best k for range between i, j (k: is the last position that multiply occurs between two matrices
-                    int q = m[i][k] + m[k][j] + p[i - 1] * p[k] * p[j];
-                    if (q < min) {
-                        min = q;
-                        s[i][j] = k;
-                    }
-                }
-                m[i][j] = min;
-            }
-        }
-        return m;
+    for (int i = 0; i < n; i++) { // the minimum cost for sequences with size of one
+      m[i][i] = 0;
     }
+
+    for (int l = 2; l <= n; l++) { // is the chain length
+      for (int i = 1; i <= n - l + 1; i++) { // [1]*
+        int j = l + i - 1;
+        int min = Integer.MAX_VALUE;
+        for (int k = i; k < j; k++) { // find best k for range between i, j (k: is the last position that multiply occurs between two matrices
+          int q = m[i][k] + m[k + 1][j] + p[i - 1] * p[k] * p[j];
+          if (q < min) {
+            min = q;
+            s[i][j] = k;
+          }
+        }
+        m[i][j] = min;
+      }
+    }
+    return m;
+  }
 }
 ```
 > You need a find maximum method to above code works well. For complete code, details and other forms [click](dynamicProgarmming/rodcut/BottomUpRodCut.java).

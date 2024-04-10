@@ -2,22 +2,21 @@ package dynamicProgarmming.rodcut;
 
 public class TopDownRodCut {
     public static void main(String[] args){
-        int[] price = {0,1,5,8,9,10,17,17,20,24,30};
-
-        // function gets the revenue array in argument
+        int[] price = {0,2,2,3,4,5,6,7};
         int[] revenue = new int[price.length];
-
         TopDownRodCut tdRodCut = new TopDownRodCut();
-        int r1 = tdRodCut.topDownRudCut(price,8,revenue);
-        System.out.println(r1);
 
         //================================================//
 
+        // Function gets the revenue array in argument
+        int r1 = tdRodCut.topDownRudCut(price,7,revenue);
+        System.out.println(r1);
 
-        // function doesn't get the revenue array in argument
-        int r2 = TopDownRodCut.memoizedRodCut(price,4);
+        // Function doesn't get the revenue array in argument
+        int r2 = TopDownRodCut.memoizedRodCut(price,7);
         //System.out.println(r2);
     }
+
     // method 1
     public int topDownRudCut(int p[], int n, int r[]) {
         if (n == 0 || n == 1) {

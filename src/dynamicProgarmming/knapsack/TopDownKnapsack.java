@@ -26,14 +26,14 @@ public class TopDownKnapsack {
         }
     }
 
-    public void printItem(int[][] c, int[] w, int n, int kpw) {
+    /*public void printItem(int[][] c, int[] w, int n, int kpw) {
         if (n == 0 || kpw == 0) {
             return;
         }
         System.out.println(c[n][kpw]);
 
         printItem(c, w, n - c[n][kpw], kpw - w[c[n][kpw]]);
-    }
+    }*/
 
     public static void main(String[] args) {
         int v[] = {0, 1, 4, 6, 8, 9, 11};
@@ -49,11 +49,6 @@ public class TopDownKnapsack {
 
         TopDownKnapsack kp = new TopDownKnapsack();
         int result = kp.topDownKnapsack(v, w, kpw, 6, b);
-
         System.out.println(result);
-        kp.printItem(b,w,5,kpw);
-
-
-
     }
 }

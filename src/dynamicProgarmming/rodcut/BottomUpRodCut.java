@@ -1,12 +1,19 @@
 package dynamicProgarmming.rodcut;
 
 public class BottomUpRodCut {
+    public static void main(String[] args){
+        BottomUpRodCut buRod = new BottomUpRodCut();
+        int[] price = {0,2,2,3,4,5,6,7};
+        int r = buRod.bottomUpRodCut(price, 7);
+        System.out.println(r);
+
+    }
+
     // Implementation the rod cut problem with bottom-up approach
     // method 1
     public int bottomUpRodCut(int p[], int n) {
         int r[] = new int[n + 1];
-
-        if (n <= 1) {
+        if (n < 1) {
             r[n] = p[n];
         }
         r[1] = p[1];
@@ -26,7 +33,7 @@ public class BottomUpRodCut {
 
     // based on CLRS pseudocode
     // method 2
-    public static int bottomUpROdCut(int[] p, int n){
+    public static int bottomUpRodCut2(int[] p, int n){
         // init an array to store solutions of subproblems
         int[] r = new int[n+1];
         r[0]=0;
@@ -34,7 +41,7 @@ public class BottomUpRodCut {
         for (int j = 1; j <= n; j++){
             int q = Integer.MIN_VALUE;
             for(int i = 1; i <= j; i++){
-                q = max(q, p[i]+r[j-i]);
+                q = max(q, p[i] + r[j-i]);
             }
             // store maximum value of rod with length j to r[j]
             r[j] = q;

@@ -61,6 +61,55 @@ public class BottomUp {
 ```
 > You need a find maximum method to above code works well. For complete code, details and other forms [click](dynamicProgarmming/rodcut/BottomUpRodCut.java).
 
+---
+
+### Time Complexity:
+
+#### Bruteforce
+Time complexity of rod cutting problem without applying _Dynamic Programming_ obtain like below:
+- Given a rod with length of `n`
+- At each point, you can either choose to cut or not cut
+
+So If the length of the rod is `n`,  then there are `2^(n - 1)` ways to cut the rod. Therefore, the time complexity of the brute force approach is exponential, specifically `O(2^n)`.
+#### Dynamic Programming
+Time complexity of rod cutting problem with applying _Dynamic Programming_ obtain like below:
+
+we can apply dynamic programming algorithm to a problem with two approaches.
+
+##### Top-Down
+In top-down approach we use recursive tree to calculate time complexity of rod cut problem.
+
+`n + n - 1 + n - 2 + ... + 0 = (n(n+1))/2` 
+
+Therefore, response of sigma is polynomial with degree of `2`. So we can say the time complexity of top-down obtain from recursive tree is `O(n^2)`.
+
+##### Bottom-Up
+In bottom-up approach we use asymptotic analysis. In bottom-up code we have two for-loops:
+```
+for (int j = 1; j <= n; j++){
+    for(int i = 1; i <= j; i++){
+        //...
+    }
+}      
+```
+|    index `j`     | 1  |  2  |    3    |     4     |      5      |  ...  |       n       |
+|:----------------:|:---|:---:|:-------:|:---------:|:-----------:|:-----:|:-------------:|
+|    index `i`     | 1  | 1,2 |  1,2,3  |  1,2,3,4  |  1,2,3,4,5  |  ...  |  1,2,3,...,n  |
+|  number of loop  | 1  |  2  |    3    |     4     |      5      |  ...  |       n       |
+
+Therefor, to calculate time complexity of rod cut problem in bottom-up approach, we should sum up number of loop happened in top snippet code.
+
+Sum of number of loop: `n + n - 1 + n - 2 + ... + 0 = (n(n+1))/2`
+
+So we can say the time complexity of bottom-up solve with asymptotic analysis is `O(n^2)`.
+
+
+---
+
+### Time Complexity:
+Space complexity of rod cutting problem is `O(n)`, because of using an auxiliary array with length of `n` to store subproblems values.
+
+---
 ### Example:
 
 #### Given Price Table

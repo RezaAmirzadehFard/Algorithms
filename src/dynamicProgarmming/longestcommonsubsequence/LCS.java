@@ -1,6 +1,12 @@
 package dynamicProgarmming.longestcommonsubsequence;
 
 public class LCS {
+    public static void main(String[] args){
+        char[] x = {'A','L','I'};
+        char[] y = {'A','L','I','R','E','Z','A'};
+        int lcs = longestCommonSubsequence(x,y,x.length,y.length);
+        System.out.println(lcs);
+    }
     public static int longestCommonSubsequence(char[] x, char[] y, int m, int n){
         if( m == 0 || n == 0){
             return 0;

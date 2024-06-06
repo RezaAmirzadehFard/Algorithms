@@ -17,7 +17,7 @@ I have covered the algorithms that are related to the Algorithms Design course o
   - Fibonacci [[docs]](docs/fibonacci.md) | [[code]](src/dynamicProgarmming/fibonacci)
   - Coin Change [docs] | [[code]](src/dynamicProgarmming/coinchange)
   - Longest Common Subsequence [[docs]](docs/longestCommonSubsequence.md) | [[code]](src/dynamicProgarmming/longestcommonsubsequence)
-  - Longest Palindrome Subsequence [docs](docs/longestPalindromeSubsequence.md) | [code](src/dynamicProgarmming/longestpalindromesubsequence)
+  - Longest Palindrome Subsequence [[docs]](docs/longestPalindromeSubsequence.md) | [[code]](src/dynamicProgarmming/longestpalindromesubsequence)
   - Optimal Binary Search Tree [docs] | [code]
 
 
@@ -36,7 +36,7 @@ I have covered the algorithms that are related to the Algorithms Design course o
   
 
 - Elementary Graph Algorithms
-  - Breadth-First Search [[docs]](docs/bfs.md) | [[code]](src/elementaryGraphAlgoithms/breadthfirstsearch/BreadthFirstSearch.java)
+  - Breadth-First Search [[docs]](docs/bredthFirstSearch) | [[code]](src/elementaryGraphAlgoithms/breadthfirstsearch/BreadthFirstSearch.java)
   - Depth-First Search [docs] | [[code]](src/elementaryGraphAlgoithms/depthfirstsearch/DepthFirstSearch.java)
 
 

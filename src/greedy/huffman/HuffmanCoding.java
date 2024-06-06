@@ -36,6 +36,7 @@ public class HuffmanCoding {
 
         System.out.println(huffman(characters));
     }
+
     public static Node huffman(List<Node> chars){
         int n = chars.size();
         PriorityQueue<Node> priorityQueue = new PriorityQueue<Node>(Comparator.comparingInt(i->i.frequency));

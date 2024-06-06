@@ -2,8 +2,8 @@ package dynamicProgarmming.coinchange;
 
 public class BottomUpCoinChange {
     public static void main(String[] args){
-        int[] coins = {0, 1, 4, 6};
-        int m = 8;
+        int[] coins = {0, 4, 3, 2,1};
+        int m = 45;
         int number = coins.length - 1;
         int minCoins = bottomUpCoinChange(coins, number, m);
         System.out.println(minCoins);
@@ -16,7 +16,7 @@ public class BottomUpCoinChange {
 
             for (int i = 1; i <= n; i++) {
                 //r[i,j] => r[n,m]
-                r[0][j] = Integer.MAX_VALUE;
+                r[0][j] = Integer.MAX_VALUE - 1;
                 r[i][0] = 0;
                 if (coins[i] > j) {
                     r[i][j] = r[i - 1][j];

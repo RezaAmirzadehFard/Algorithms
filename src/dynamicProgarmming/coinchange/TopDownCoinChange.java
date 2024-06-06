@@ -3,8 +3,8 @@ package dynamicProgarmming.coinchange;
 public class TopDownCoinChange {
 
     public static void main(String[] args) {
-        int[] coins = {0, 1, 4, 6};
-        int amount = 8;
+        int[] coins = {0, 4, 3, 2,1};
+        int amount = 45;
         int n = coins.length - 1;
         int[][] memo = new int[n + 1][amount + 1];
 
@@ -22,7 +22,7 @@ public class TopDownCoinChange {
         if (m == 0) {
             return 0;
         } else if (n == 0) {
-            return Integer.MAX_VALUE;
+            return 1000;
         }
         if (memo[n][m] > 0) {
             return memo[n][m];

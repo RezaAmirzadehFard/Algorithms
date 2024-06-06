@@ -23,7 +23,7 @@ I have covered the algorithms that are related to the Algorithms Design course o
 
 - Greedy 
   - Fractional Knapsack
-  - Activity Selection [docs] | [[code]](src/greedy/activityselection/ActivitySelection.java)
+  - Activity Selection [[docs]](docs/activitySelection.md) | [[code]](src/greedy/activityselection/ActivitySelection.java)
   - Huffman Codes [[docs]](docs/huffman.md) | [[code]](src/greedy/huffman/HuffmanCoding.java)
   
 

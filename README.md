@@ -18,7 +18,7 @@ I have covered the algorithms that are related to the Algorithms Design course o
   - Coin Change [docs] | [[code]](src/dynamicProgarmming/coinchange)
   - Longest Common Subsequence [[docs]](docs/longestCommonSubsequence.md) | [[code]](src/dynamicProgarmming/longestcommonsubsequence)
   - Longest Palindrome Subsequence [[docs]](docs/longestPalindromeSubsequence.md) | [[code]](src/dynamicProgarmming/longestpalindromesubsequence)
-  - Optimal Binary Search Tree [docs] | [code]
+  - Optimal Binary Search Tree [docs] | [[code]](src/dynamicProgarmming/optimabinarysearchtree)
 
 
 - Greedy 

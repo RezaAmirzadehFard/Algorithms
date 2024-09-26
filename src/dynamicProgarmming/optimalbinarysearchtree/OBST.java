@@ -1,4 +1,4 @@
-package dynamicProgarmming.optimabinarysearchtree;
+package dynamicProgarmming.optimalbinarysearchtree;
 
 public class OBST {
     public static void main(String[] args){

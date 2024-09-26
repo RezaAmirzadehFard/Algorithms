@@ -1,4 +1,4 @@
-package dynamicProgarmming.optimabinarysearchtree;
+package dynamicProgarmming.optimalbinarysearchtree;
 
 public class TopDownOBST {
     public static void main(String[] args){

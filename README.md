@@ -13,16 +13,15 @@ I have covered the algorithms that are related to the Algorithms Design course o
 - Dynamic Programming
   - Rod Cutting [[docs]](docs/rodCutting.md) | [[code]](src/dynamicProgarmming/rodcut)
   - Matrix-chain Multiplication [[docs]](docs/matrixChain.md) | [[code]](src/dynamicProgarmming/matrixchain) 
-  - Knapsack [docs] | [[code]](src/dynamicProgarmming/knapsack)
+  - Knapsack 0-1 [[docs]](docs/knapsack.md) | [[code]](src/dynamicProgarmming/knapsack)
   - Fibonacci [[docs]](docs/fibonacci.md) | [[code]](src/dynamicProgarmming/fibonacci)
   - Coin Change [docs] | [[code]](src/dynamicProgarmming/coinchange)
   - Longest Common Subsequence [[docs]](docs/longestCommonSubsequence.md) | [[code]](src/dynamicProgarmming/longestcommonsubsequence)
   - Longest Palindrome Subsequence [[docs]](docs/longestPalindromeSubsequence.md) | [[code]](src/dynamicProgarmming/longestpalindromesubsequence)
-  - Optimal Binary Search Tree [docs] | [[code]](src/dynamicProgarmming/optimabinarysearchtree)
+  - Optimal Binary Search Tree [[docs]](docs/optimalBinarySearchTree.md) | [[code]](src/dynamicProgarmming/optimalbinarysearchtree)
 
 
-- Greedy 
-  - Fractional Knapsack
+- Greedy
   - Activity Selection [[docs]](docs/activitySelection.md) | [[code]](src/greedy/activityselection/ActivitySelection.java)
   - Huffman Codes [[docs]](docs/huffman.md) | [[code]](src/greedy/huffman/HuffmanCoding.java)
   
@@ -41,6 +40,7 @@ I have covered the algorithms that are related to the Algorithms Design course o
 
 
 - Minimum Spanning Trees
+  - Borůvka's Algorithm
   - Kruskal's Algorithm
   - Prim's Algorithm
 

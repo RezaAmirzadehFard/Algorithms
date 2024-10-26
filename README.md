@@ -16,6 +16,7 @@ I have covered the algorithms that are related to the Algorithms Design course o
   - Knapsack 0-1 [[docs]](docs/knapsack.md) | [[code]](src/dynamicProgarmming/knapsack)
   - Fibonacci [[docs]](docs/fibonacci.md) | [[code]](src/dynamicProgarmming/fibonacci)
   - Coin Change [docs] | [[code]](src/dynamicProgarmming/coinchange)
+  - Edit Distance [docs] | [[code]](src/dynamicProgramming/editdistance)
   - Longest Common Subsequence [[docs]](docs/longestCommonSubsequence.md) | [[code]](src/dynamicProgarmming/longestcommonsubsequence)
   - Longest Palindrome Subsequence [[docs]](docs/longestPalindromeSubsequence.md) | [[code]](src/dynamicProgarmming/longestpalindromesubsequence)
   - Optimal Binary Search Tree [[docs]](docs/optimalBinarySearchTree.md) | [[code]](src/dynamicProgarmming/optimalbinarysearchtree)

@@ -1,5 +1,9 @@
 package disjointset;
 
+/***
+ * Eager Approach
+ * This is first approach
+ */
 
 public class QuickFind {
     private int[] id;

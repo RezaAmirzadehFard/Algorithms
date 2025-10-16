@@ -47,7 +47,7 @@ public class TopDown {
     }
 }
 ```
-> You need a find maximum method to above code works well. For complete code, details and other forms [click](src/dynamicProgarmming/rodcut/TopDownRodCut.java).
+> You need a find maximum method to above code works well. For complete code, details and other forms [click](src/dynamicProgramming/rodcut/TopDownRodCut.java).
 
 ## Bottom-Up :
 ```java
@@ -76,7 +76,7 @@ public class BottomUp {
     }
 }
 ```
-> You need a find maximum method to above code works well. For complete code, details and other forms [click](dynamicProgarmming/rodcut/BottomUpRodCut.java).
+> You need a find maximum method to above code works well. For complete code, details and other forms [click](dynamicProgramming/rodcut/BottomUpRodCut.java).
 
 ### Example:
 

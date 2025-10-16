@@ -75,7 +75,8 @@ public class BottomUp {
 
 ## Time Complexity:
 - O(n^3)
-
+## Space Complexity:
+We use 2 dimension array with size of (n*n) for memoization, so Space Complexity is O(n^2).
 ### Example:
 
 #### Given Matrix Table

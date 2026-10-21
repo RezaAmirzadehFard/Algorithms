@@ -31,7 +31,7 @@ I have covered the algorithms that are related to the Algorithms Design course o
   - Binary Counter
     - Increment Binary Counter [[code]](src/amortizedAnalysis/binarycounter/IncrementBinaryCounter.java)
     - Decrement Binary Counter [[code]](src/amortizedAnalysis/binarycounter/DecrementBinaryCounter.java)
-  - Stack operation
+  - Stack operation [[code]](src/amortizedAnalysis/stackoperation/StackOperation.java)
   - Dynamic Array [[code]](src/amortizedAnalysis/dynamicarray/DynamicArray.java)
   
 
